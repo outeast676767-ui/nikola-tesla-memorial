@@ -826,3 +826,61 @@ body {
         background-position: center 35%;
     }
 }
+@keyframes cinematicReveal {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter:blur(0);
+    }
+}
+.hero h1 {
+    animation: cinematicReveal 1.5s ease forwards;
+}
+.hero p {
+    animation: cinematicReveal 1.5s ease 0.4s both;
+}
+.hero #enterButton {
+    animation: cinematicReveal 1.5s ease 0.8s both;
+}
+.room-card {
+    animation: cardEntrance 0.9s ease both;
+}
+.room-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.room-card:nth-child(2) {
+    animation-delay: 0.45s;
+}
+.room-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.92);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+.mind-room.experiment-active .coil-container {
+    filter: drop-shadow(0 0 15px #00d9ff)
+    drop-shadow(0 0 30px #008cff);
+    animation: electricPulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes electricPulse {
+    from {
+        filter: drop-shadow(0 0 10px #00d9ff);
+    }
+    to {
+        filter: drop-shadow(0 0 35px #008cff);
+    }
+}
